@@ -1,15 +1,256 @@
-//root scales
-:root {
-    font-size: 62.5%;
-    body {
-      margin: 0;
-      // Body font size 16px
-      font-size: 1.6rem;
-    }
-  }
-
 body{
-    background-color: color-white;
+    background: rgba($color-pink, .5);
+}
+
+.site-header {
+position:fixed;
+top: 0;
+right: 0;
+left: 0;
+max-width: 100%;
+padding: 2rem;
+margin: 0 auto;
+top: 0;
+
+display: flex;
+align-items: center;
+justify-content: space-between;
+flex-wrap: wrap;
+
+    &--links {
+        align-self: flex-end;
+        margin-left: 1rem;
+        display: inline-block;
+    }
+
+    &--links ul {
+        margin: 1rem 0.5rem;
+	    text-align: center;
+    }
+
+    &--links li {
+        display: inline;
+    }
+
+    &--links a {
+        display: inline-block;
+        margin: 1rem;
+    }
+}
+
+
+//section-1 (screen 1, about me / quicklinks)
+
+.section-1{
+    height: 75vh;
+    padding: 2rem 6rem 2rem;
+    
+    display: grid;
+    grid-template-rows: 3fr, 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5rem;
+
+    &-left{
+        grid-column: 1 / 3;
+        grid-row: 1;
+        text-align: right;
+        margin-bottom: -2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: right;
+    }
+
+    &-right{
+        grid-column: 3;
+        grid-row: 1 / -1;
+        align-self: center;
+        
+        &-text{
+            transform: rotate(-90deg);
+            top: 35vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+    }
+
+    &--intro{
+        margin-bottom: 0rem;
+    }
+} 
+
+//section 2- case studies
+
+.section-2{
+
+    
+    display: grid;
+    grid-template-columns: minmax(0,6rem) repeat(12, minmax(60px, 1fr)) minmax(0,6rem);
+    grid-auto-rows: minmax(min-content, max-content);
+    //grid-template-rows: repeat(4, minmax(60px, 1fr));
+    grid-gap: 3rem;
+
+    &--background{
+        background: linear-gradient(180deg, rgba(0, 10, 209, 0) 0%, rgb(0, 10, 209) 100%); 
+        grid-column: 9 / -1;
+        grid-row: 1 / 4; 
+
+        z-index: -10;
+    }
+}
+
+.webProject { 
+    //background: blueviolet;
+    grid-column: 2 / 7;
+    grid-row: 2;
+
+    margin-bottom: 3rem;
+}
+
+.digitalMarketing{
+    grid-column: 3 / 9;
+    grid-row: 3;
+
+    margin-bottom: 3rem;
+
+}
+
+.personalWork{
+    grid-column: 9 / 14;
+    grid-row: 3;
+
+    margin-left: 3rem;
+
+    //display: flex;
+    //flex-direction: column;
+    //align-items:center
+    
+}
+
+.contactMe{
+    grid-column: 2 / 8;
+    grid-row: 4;
+    
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 2rem;
+}
+
+
+.projectImage{
+
+      //background-color: red;
+      grid-column: 8 / -1;
+    grid-row: 2;
     }
     
+
+    .projectImage{
+        opacity: 1;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover;
+          transition: all 0.3s ease-in;
+          -webkit-transition: all 0.3s ease-in;
+          -moz-transition: all 0.3s ease-in;
+          //background-color: green;
+        }
+        
+        .projectImage-show .projectImage {
+          z-index: 1;
+          opacity: 1;
+          transition: all 0.3s ease-in;
+          -webkit-transition: all 0.3s ease-in;
+          -moz-transition: all 0.3s ease-in;
+        }
+        
+        .projectImage-show a:hover {
+          z-index: 2;
+          border-bottom-color: transparent;
+          color: var(--red);
+        }
+        
+        .projectImage-show .container a:hover::before {
+          transform: scaleX(1);
+          transition: transform 0.2s 0.1s ease-out;
+        }
+
+
+//case study general styling
+
+.project{
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-auto-rows: min-content;
+    grid-row-gap: 1rem;
+    align-items: first baseline; 
+    padding: 0.5rem 0;
+
+    &-info{
+        padding-left: 1.5rem;
+    }
+
+    &-name{
+        margin-bottom: 0;
+    }
+
+    &-type{
+        margin-top: 0.5rem;
+    }
+
+    margin-bottom: -1.5rem;
+
+}
+
+
+
+.webProject-title{
+    margin-bottom: -1rem;
+    margin-top: 1rem;
+}
+
+.homepage-contact{
+    margin-left: 3rem;
+}
+
+//old- remove at end of proj
+.casestudy1{
     
+    &-hover{
+        grid-column: 1 / span 3;
+        grid-row: 1 / span 2;
+        cursor: url(/img/arrow-pink-right.svg), auto;
+        z-index: 15;
+
+        transition: all, .8s;
+
+        &:hover, &:focus {
+            background: rgba(0, 10, 209, 0.3);
+
+        }
+    }
+
+    &-image{
+        grid-column: 1 / span 3;
+        grid-row: 1 / span 2;
+
+        background: url(/img/placeholder2x1.jpg);
+        background-size: cover;
+    }
+
+    &-container{
+        grid-column: 3 / -1;
+        grid-row: 1 / span 2;
+    }
+
+    &-text{
+        position: sticky;
+        top: 45vh;
+        width: 100%;
+        z-index: 10;
+        }    
+    }

@@ -1,17 +1,272 @@
-.h1{
-    font-family: 'Palanquin Dark', sans-serif;
-    font-weight: 700;
-    font-size: 8rem;
+//root scales
+:root {
+    font-size: 62.5%;
+    body {
+      margin: 0;
+      // Body font size 16px
+      font-size: 1.6rem;
+    }
+  }
 
-    &-dark{
+//google font import
+@import url('https://fonts.googleapis.com/css?family=Palanquin:100|Palanquin+Dark:700|Roboto:400,400i,700&display=swap');
+
+
+//import suiseintl
+@font-face {
+    font-family: "SuisseIntl";
+    src: url("/fonts/SuisseIntl-Regular-WebM.woff") format('woff');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "SuisseIntl";
+    src: url("/fonts/SuisseIntl-RegularItalic-WebM.woff") format('woff');
+    font-weight: 300;
+    font-style: italic;
+}
+
+
+@font-face {
+    font-family: "SuisseIntl";
+    src: url("/fonts/SuisseIntl-BoldItalic-WebM.woff") format('woff');
+    font-weight: bold, 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "SuisseIntl";
+    src: url("/fonts/SuisseIntl-Bold-WebM.woff") format('woff');
+    font-weight: bold, 500;
+}
+
+@font-face {
+    font-family: "SuisseIntl";
+    src: url("/fonts/SuisseIntl-Black-WebM.woff") format('woff');
+    font-weight: 800;
+}
+
+@font-face {
+    font-family: "SuisseIntl";
+    src: url("/fonts/SuisseIntl-Light-WebM.woff") format('woff');
+    font-weight: 100;
+}
+
+
+//suisse-works
+@font-face {
+    font-family: "SuisseWorks";
+    src: url("/fonts/SuisseWorks-Regular-WebS.woff") format('woff');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "SuisseWorks";
+    src: url("/fonts/SuisseWorks-Bold-WebS.woff") format('woff');
+    font-weight: bold, 500;
+}
+
+
+//text select color
+::selection {
+    color: $color-primary;
+    background: #FA7268;
+  }
+
+.h1 {
+    font-family: 'SuisseIntl', sans-serif;
+    font-weight: 100;
+    font-size: 10rem;
+    line-height: 9rem;
+    margin-bottom: -2rem; 
+    margin-top: 2rem;
+
+    &--dark {
+        @extend .h1;
+        color: $color-black;
+    }
+
+    &--light {
+        @extend .h1;
+        color: $color-white;
+    }
+
+
+    
+}
+
+.h2 {
+    font-family: 'SuisseWorks', sans-serif;
+    font-weight: 500;
+    font-size: 4rem;
+    line-height: 4rem;
+
+    &--dark {
+        @extend .h2;
         color: $color-primary;
+
+        &-casestudy {
+            @extend .h2--dark;
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+    }
+
+    &--light {
+        @extend .h2;
+        color: $color-white;
+    }
+    
+    
+}
+
+.h3 {
+    font-family: 'SuisseWorks', serif;
+    font-weight: 500;
+    font-size: 2.8rem;
+
+    &--dark {
+        @extend .h3;
+        color: $color-primary;
+    }
+
+    &--light {
+        @extend .h3;
+        color: $color-white;
     }
     
 }
 
+.h4 {
+    font-family: 'SuisseIntl', sans-serif;
+    font-weight: 800;
+    font-size: 2rem;
 
-a{
-        font-family: 'Roboto', sans-serif;
-        font-weight: 900;
+    &--dark {
+        @extend .h4;
+        color: $color-black;
+    }
+
+    &--light {
+        @extend .h4;
+        color: $color-white;
     }
     
+}
+
+.h4-alt {
+    font-family: 'SuisseIntl', sans-serif;
+    font-weight: 300;
+    font-size: 2rem;
+
+    &--dark {
+        @extend .h4-alt;
+        color: $color-black;
+    }
+
+    &--light {
+        @extend .h4-alt;
+        color: $color-white;
+    }
+    
+}
+
+.body {
+    font-family: 'SuisseIntl', sans-serif;
+    font-weight: 300;
+    font-size: 1.6rem;
+
+    &--dark {
+        @extend .body;
+        color: $color-black;
+    }
+
+    &--light {
+        @extend .body;
+        color: $color-white;
+    }
+    
+}
+
+.bold {
+    font-family: 'SuisseIntl', sans-serif;
+    font-weight: 500;
+    font-size: 1.6rem;
+
+    &--dark {
+        @extend .bold;
+        color: $color-black;
+    }
+
+    &--light {
+        @extend .bold;
+        color: $color-white;
+    }
+    
+}
+
+.caption{
+    font-family: 'SuisseIntl', sans-serif;
+    font-weight: 300;
+    font-size: 1.4rem;
+
+    &--dark {
+        @extend .caption;
+        color: $color-black;
+    }
+
+    &--light {
+        @extend .caption;
+        color: $color-white;
+    }
+}
+
+
+.link {
+    font-family: 'SuisseWorks', sans-serif;
+    font-weight: 800;
+    text-decoration: none;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .7s;
+    cursor: pointer;    
+    
+        &:hover, &:focus {
+            background-size: 100% 2px;
+        }
+
+    &--dark {
+        @extend .link;
+        color: $color-primary; 
+    }
+
+    &--light {
+        @extend .link;
+        color: $color-white;
+    }
+
+    &--header{
+    font-family: 'SuisseWorks', sans-serif;
+    font-weight: 800;
+    text-decoration: none;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 90%;
+    background-repeat: no-repeat;
+    background-size: 0% 3px;
+    transition: background-size .7s;
+    cursor: pointer;
+    color: $color-primary;    
+    
+        &:hover, &:focus {
+            background-size: 100% 3px;
+        }
+
+    }
+
+}
+    
+.projectTitle{
+    margin-top: 0;
+}
