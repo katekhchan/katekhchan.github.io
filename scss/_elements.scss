@@ -1,0 +1,45 @@
+.arrow{
+    transform: rotate(180deg);
+}
+
+
+    .button{
+        font-family: 'SuisseIntl', sans-serif;
+        font-weight: 800;
+        text-decoration: none;
+        color: $color-white;
+        background-color: $color-primary;
+        padding: 15px 20px;
+        text-align: center;
+        position: relative;
+        transition: all .35s;
+        cursor: pointer; 
+
+        &-span{
+            position: relative;
+            z-index: 2;
+        }
+    @media (hover: hover) {
+
+        &:after{
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: $color-black;
+            transition: all .35s;
+        }
+
+        &:hover{
+            color: #fff;
+        }
+        
+        &:hover:after{
+            width: 50%;
+        }
+
+    
+    }
+}

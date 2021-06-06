@@ -1,0 +1,32 @@
+.footer{
+    display: grid;
+    grid-template-columns: minmax(0,6rem) repeat(1, minmax(60px, 1fr)) minmax(0,6rem);
+    grid-auto-rows: minmax(min-content, max-content);
+    //background-color: $color-primary;
+    //color: $color-white;
+    text-align: center;
+    padding-bottom: 10;
+
+    &-logo{
+        grid-column: 2 / 3;
+        justify-self: center;
+        //margin-bottom: 2rem;
+    }
+
+    &-copyright{
+        grid-column: 2 / 3;
+        grid-row: 3 / 4; 
+        margin-bottom: 2rem;
+    }
+
+    &-social{
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+        margin: 2rem 0 2rem 0;
+
+        &-links{
+            margin: 0 3rem 0 2rem;
+        }
+    }
+
+}
