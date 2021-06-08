@@ -9,6 +9,11 @@ html {
 
 
 
+.hide{
+    &-desktop{
+         display: none;
+        }
+    }
 
 .site-header {
 position:fixed;

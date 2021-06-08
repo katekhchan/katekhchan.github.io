@@ -298,6 +298,10 @@ html {
   background: linear-gradient(-90deg, #ffffff 50%, #FAF2EC 50%);
 }
 
+.hide-desktop {
+  display: none;
+}
+
 .site-header {
   position: fixed;
   top: 0;
@@ -879,6 +883,12 @@ li {
     scroll-behavior: smooth;
     background: white;
   }
+  .hide-mobile {
+    display: none;
+  }
+  .hide-desktop {
+    display: inline;
+  }
   .logo-img {
     size: 10rem;
   }
@@ -1059,6 +1069,75 @@ li {
   .footer {
     background: #faf2ec;
   }
+  .nomargin-top {
+    margin-top: 0;
+  }
+  .case-section-1 {
+    height: 45vh;
+  }
+  .case-section-2 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: start;
+        align-content: flex-start;
+  }
+  .case-left {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: relative;
+    width: initial;
+    height: initial;
+    padding: 4rem;
+    margin: 0rem;
+    background-color: #faf2ec;
+    top: 0;
+  }
+  .case-center {
+    display: none;
+  }
+  .case-right {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: relative;
+    width: initial;
+    height: initial;
+    margin: 5rem 4rem 5rem 4rem;
+    padding: initial;
+    -ms-flex-item-align: center;
+        align-self: center;
+  }
+  .case-footer {
+    padding-top: 0;
+    background-color: #faf2ec;
+  }
+  .case-section-1-arrow {
+    display: none;
+  }
+  .hide-desktop {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .case-arrow {
+    margin-top: -3rem;
+    margin-bottom: 2rem;
+  }
 }
 
 @media (max-width: 650px) {
@@ -1078,6 +1157,9 @@ li {
   .about-bio {
     padding: 2rem 4rem 2rem 4rem;
   }
+  .case-section-1 {
+    padding: 4rem;
+  }
 }
 
 @media (max-width: 520px) {
@@ -1086,9 +1168,26 @@ li {
     font-weight: 100;
     font-size: 6.8rem;
   }
+  .case-section-1 {
+    height: 50vh;
+    padding: 2rem;
+  }
 }
 
 @media (max-width: 460px) {
+  .case-arrow {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .mobile-align {
+    text-align: center;
+  }
+  .space-mobile {
+    padding-top: 2rem;
+  }
   .about-txt {
     margin-top: 0;
   }
@@ -1107,6 +1206,7 @@ li {
     font-family: 'SuisseIntl', sans-serif;
     font-weight: 100;
     font-size: 6rem;
+    line-height: 7rem;
     margin-bottom: -1rem;
     margin-top: 2rem;
   }
@@ -1152,9 +1252,53 @@ li {
     display: block;
     max-height: 75%;
   }
+  .case-ul {
+    columns: 1;
+    -webkit-columns: 1;
+    -moz-columns: 1;
+  }
+  .hide-desktop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (max-width: 435px) {
+  .hide-desktop {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .case-contact {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .case-arrow {
+    margin-top: 4rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
 }
 
 @media (max-width: 390px) {
+  .space-mobile {
+    padding-top: 1rem;
+  }
   .h1, .h1--dark, .h1--light {
     font-family: 'SuisseIntl', sans-serif;
     font-weight: 100;
@@ -1188,6 +1332,9 @@ li {
   }
   .footer-social-links {
     font-size: 1.4rem;
+  }
+  .case-section-1 {
+    height: 45vh;
   }
 }
 
@@ -1234,7 +1381,7 @@ li {
   }
   .h4-alt--darklp {
     font-size: 1.6rem;
-    margin: 0 3rem 3rem 3rem;
+    margin: 0 0 3rem 0;
   }
   .h4-footer {
     margin-bottom: 3rem;
