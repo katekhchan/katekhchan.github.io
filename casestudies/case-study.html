@@ -2,11 +2,13 @@
     <title>katekhchan.com | portfolio of kate chan</title>
     <link rel="stylesheet" href="/css/base.css" />
     <link rel="stylesheet" type="text/css" href="/scss/main.css">
+    <link rel="stylesheet" href="/scss/lumos.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
 </head>
 <a id="top"></a>
 
 <body>
+    <script src="/js/lumos.js"></script>
     <header class="site-header">
         <div class="site-header--logo">
             <a href="/index.html">
@@ -103,7 +105,21 @@
     </div>
 
     <div class="case-right">
-        <img class="project-image" src="/img/placeholder-2.jpg">
+        <template id="lumos-template">
+      <div id="lumos-container">
+        <figure id="lumos-figure">
+          <img src="" alt="" id="lumos-image">
+          <figcaption id="lumos-caption"></figcaption> <!-- Optional if you don't want to use data-lumos-caption -->
+        </figure>
+      </div>
+    </template>
+    
+        <img class="project-image" 
+            src="/img/placeholder-2.jpg" 
+            data-action="lumos"
+            data-lumos-src="/img/placeholder-3.jpg"
+             data-lumos-caption="A caption which describes the image"/>
+
         <p class="body">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean at placerat magna, sed venenatis lacus. Praesent id massa sed elit sollicitudin scelerisque. Curabitur ut orci accumsan nulla mattis convallis non eu quam. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam molestie enim nec purus facilisis sagittis. Ut non nibh ante. Mauris dui augue, consectetur id odio quis, vulputate tempus nisi. Pellentesque turpis nunc, rhoncus at nulla vel, fermentum consectetur tortor. Morbi mollis leo eu convallis porttitor. Pellentesque mauris diam, bibendum in euismod vitae, eleifend a ipsum. Mauris ac sodales ante.
             <br><br>
@@ -161,4 +177,3 @@
         </div>
     </section> 
 </footer>
-
