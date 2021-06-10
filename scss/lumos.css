@@ -1,12 +1,16 @@
 :root {
   --lumos-background: rgba(250, 242, 236, .8);
-  --lumos-padding: 2rem;
+  --lumos-padding: 0rem;
   --lumos-child-margin-top: 1rem;
   --lumos-transition-duration: 350ms;
 }
 
 img[data-action=lumos] {
   cursor: zoom-in;
+}
+
+noscroll{
+  overflow: hidden;
 }
 
 #lumos-container {
@@ -41,13 +45,14 @@ img[data-action=lumos] {
   animation-fill-mode: forwards;
 }
 #lumos-figure {
-  display: flex;
+  
   align-items: center;
   flex-direction: column;
   justify-content: center;
   max-width: 100%;
   max-height: 100%;
   margin: 0;
+  overflow: scroll;
 }
 #lumos-image {
   overflow: hidden;
