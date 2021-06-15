@@ -18,5 +18,29 @@
     <br>
     <a class="link--dark"> Lorem ipsum dolor sit amet,<br> consectetur </a>
     <br>
+
+    <div id="overlay">
+        <img id="overlay-close" src="/img/arrow-2.svg" alt="Pointer arrow" onclick="off()">
+        <div id="overlay-container">
+            <div id="overlay-img">
+                <img src="/img/placeholder.jpg"/>
+                <img src="/img/placeholder.jpg"/>
+                <img src="/img/placeholder.jpg"/>
+                <img src="/img/placeholder.jpg"/>
+            </div>
+        </div>
+    
+    </div>
+    <img onclick="on()" src="/img/placeholder-3.jpg">
+
+    <script>
+        function on() {
+          document.getElementById("overlay").style.display = "flex";
+        }
+        
+        function off() {
+          document.getElementById("overlay").style.display = "none";
+        }
+        </script>
 </body>
 
