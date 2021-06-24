@@ -48,14 +48,15 @@
     
     &-close{
         z-index: 10;
-        position: relative;
-    
+        position: absolute;
+        top: 2.5rem;
+        right: 2.5rem;
         cursor: pointer;
-        margin: 2.5rem;
+        //margin: 2.5rem;
     }
 
     &-arrow{
-        position: absolute;
+        //position: absolute;
         height: 2rem;
         margin-left: 2.5rem;
         //right: 2.5rem;
@@ -84,13 +85,23 @@
   }
   
   #linkwrapper{
-    position: relative;
+    position: absolute;
+    right: 2.5rem; 
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-right: 2.5rem;
+    //margin-right: 2.5rem;
+    top: 50%;
+    transform: translate(0, -50%);
     }
 
 .lastimage{
     margin-bottom: 2.5rem;
+}
+
+#single-img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
